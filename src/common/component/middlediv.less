@@ -17,16 +17,17 @@
     width: 800px;
     display: flex;
     justify-content: space-around;
-    li{
+    .firstli{
       width: 150px;
       line-height: @barheight;
       text-align:center;
       font-size: @titlefs;
       position: relative;
+      z-index: 99999;
       .second{
-        // display: none;
+        display: none;
         position: absolute;
-        z-index: 0;
+        z-index: 1;
         top: @barheight - @radius;
         padding-top: 8px;
         font-size: 0.8em;
@@ -34,12 +35,11 @@
         border-radius: @radius;
       }
     }
-  }
-}
-
-li:hover{
-  background-color: #e2e2e2;
-  .second{
-   background-color: red;
+    .firstli:hover{
+      background-color: #e2e2e2;
+      .second{
+       display: block;
+      }
+    }
   }
 }

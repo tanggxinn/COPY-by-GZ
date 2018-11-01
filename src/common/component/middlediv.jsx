@@ -6,7 +6,7 @@ class Middlediv extends Component{
     return(
       <nav className={styles.bar}>
           <ul className={styles.first}>
-            <li>抽血检查项目
+            <li className={styles.firstli}>抽血检查项目
               <ul className={styles.second}>
                 <li>血常规</li>
                 <li>血生化（肝肾功能）</li>
@@ -14,7 +14,7 @@ class Middlediv extends Component{
                 <li>免疫蛋白电泳</li>
               </ul>
             </li>
-            <li>拍片项目
+            <li className={styles.firstli}>拍片项目
               <ul className={styles.second}>
                 <li>X光片</li>
                 <li>CT</li>
@@ -23,7 +23,7 @@ class Middlediv extends Component{
                 <li>B超</li>
               </ul>
             </li>
-            <li>其他项目
+            <li className={styles.firstli}>其他项目
               <ul className={styles.second}>
                 <li>骨穿</li>
                 <li>血液肿瘤免疫残留</li>
