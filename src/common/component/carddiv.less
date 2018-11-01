@@ -1,0 +1,28 @@
+@cardwidth:200px;
+@cardheight:400px;
+@imgsize:160px;
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.radius {
+  border-radius: 8px;
+}
+
+.most {
+  width: @cardwidth;
+  height: @cardheight;
+  padding-top: (@cardwidth - @imgsize) / 2;
+  background-color: #ffffff;
+  .radius;
+  .center;
+
+  .newimg {
+    width: @imgsize;
+    height: @imgsize;
+    overflow: hidden;
+    .radius;
+  }
+}

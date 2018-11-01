@@ -17,26 +17,27 @@
   .main {
     width: 800px;
     position: relative;
+    a {
+      position: absolute;
+      right: 0;
+      top: 1px;
+    
+      .introduce {
+        width: 60px;
+        height: 60px;
+        .center;
+    
+        img {
+          width: 35px;
+          height: 35px;
+        }
+    
+        .notim {
+          font-size: @minfs;
+        }
+      }
+    }
   }
+
 }
 
-a {
-  position: absolute;
-  right: 0;
-  top: 1px;
-
-  .introduce {
-    width: 60px;
-    height: 60px;
-    .center;
-
-    img {
-      width: 35px;
-      height: 35px;
-    }
-
-    .notim {
-      font-size: @minfs;
-    }
-  }
-}
