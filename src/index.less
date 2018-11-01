@@ -1,0 +1,42 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+}
+
+:global(.ant-layout) {
+  min-height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@introfs: 1.2em;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration-line: none;
+  list-style: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #222831;
+}
+
+p {
+  padding-top: 5px;
+  color: #393e46;
+  font-size: @introfs;
+}
