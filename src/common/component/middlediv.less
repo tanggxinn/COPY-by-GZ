@@ -1,11 +1,15 @@
 @titlefs: 1.1em;
-@barheight:38px;
-@radius:8px;
+@barheight: 38px;
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.li {
+  width: 150px;
+  text-align: center;
 }
 
 .bar {
@@ -17,28 +21,28 @@
     width: 800px;
     display: flex;
     justify-content: space-around;
-    .firstli{
-      width: 150px;
+    .firstli {
+      .li;
       line-height: @barheight;
-      text-align:center;
       font-size: @titlefs;
       position: relative;
-      z-index: 99999;
-      .second{
+      .second {
         display: none;
         position: absolute;
-        z-index: 1;
-        top: @barheight - @radius;
-        padding-top: 8px;
-        font-size: 0.8em;
+        top: @barheight;
+        padding: 8px 0;
         background-color: #ffffff;
-        border-radius: @radius;
+        border-radius: 0 0 8px 8px;
+        li {
+          font-size: 0.8em;
+          .li;
+        }
       }
     }
-    .firstli:hover{
+    li:hover {
       background-color: #e2e2e2;
-      .second{
-       display: block;
+      .second {
+        display: block;
       }
     }
   }

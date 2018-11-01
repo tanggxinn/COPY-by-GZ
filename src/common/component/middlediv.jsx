@@ -1,35 +1,19 @@
 import React, { Component } from 'react'
 import styles from './middlediv.less'
+import Ul_li from './ul_li'
+
+let mcmc1=["血常规","血生化（肝肾功能）","激素六项","免疫蛋白电泳"]
+let mcmc2=["X光片","CT","增强CT","核磁共振","B超"]
+let mcmc3=["骨穿","血液肿瘤免疫残留","骨密度","+"]
 
 class Middlediv extends Component{
   render(){
     return(
       <nav className={styles.bar}>
           <ul className={styles.first}>
-            <li className={styles.firstli}>抽血检查项目
-              <ul className={styles.second}>
-                <li>血常规</li>
-                <li>血生化（肝肾功能）</li>
-                <li>激素六项</li>
-                <li>免疫蛋白电泳</li>
-              </ul>
-            </li>
-            <li className={styles.firstli}>拍片项目
-              <ul className={styles.second}>
-                <li>X光片</li>
-                <li>CT</li>
-                <li>增强CT</li>
-                <li>核磁共振</li>
-                <li>B超</li>
-              </ul>
-            </li>
-            <li className={styles.firstli}>其他项目
-              <ul className={styles.second}>
-                <li>骨穿</li>
-                <li>血液肿瘤免疫残留</li>
-                <li>骨密度</li>
-              </ul>
-            </li>
+              <Ul_li date = {mcmc1} datename= "抽血检查项目" />
+              <Ul_li date = {mcmc2} datename= "拍片检查项目" />
+              <Ul_li date = {mcmc3} datename= "其他检查项目" />
           </ul>
       </nav>
     )
