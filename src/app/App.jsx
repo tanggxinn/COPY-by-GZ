@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { get } from '../utils/require'
 import Headdiv from '../common/component/headdiv'
 import Middlediv from '../common/component/middlediv'
-import Card from '../common/component/carddiv';
+import Maindiv from '../common/component/maindiv';
 
 class Demo extends Component {
   componentDidMount() {
@@ -15,7 +15,7 @@ class Demo extends Component {
       <div>
         <Headdiv />
         <Middlediv />
-        <Card />
+        <Maindiv />
       </div>
     )
   }

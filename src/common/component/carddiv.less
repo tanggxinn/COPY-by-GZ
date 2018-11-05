@@ -1,10 +1,15 @@
 @cardwidth:200px;
-@cardheight:400px;
+@cardheight:360px;
 @imgsize:160px;
+@padding:(@cardwidth - @imgsize) / 2;
+@fontsz:0.9em;
+@titlefz:1em;
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .radius {
@@ -14,15 +19,50 @@
 .most {
   width: @cardwidth;
   height: @cardheight;
-  padding-top: (@cardwidth - @imgsize) / 2;
+  padding: @padding;
+  margin: 30px;
   background-color: #ffffff;
+  display: inline-block;
   .radius;
-  .center;
+  
+  .sub {
+    .center;
+    position: relative;
+    .minimg {
+      img {
+        width: @imgsize;
+        height: @imgsize;
+        .radius;
+      }
+    }
+    .autoimg {
+      display: none;
+      position:absolute;
+      z-index: 999999;
+      top: 0;
+    }
+    .minimg:hover +.autoimg {
+        display: block;
+      }
 
-  .newimg {
-    width: @imgsize;
-    height: @imgsize;
-    overflow: hidden;
-    .radius;
+    .sum {
+      padding-top: @padding;
+      font-size: @titlefz;
+      line-height: @titlefz*2;
+      text-align: center;
+      p {
+        padding-top: 0;
+        font-size: @fontsz;
+        line-height: @fontsz*2;
+        max-height: @fontsz*2*4;
+        text-align: left;
+        text-indent: @fontsz;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+    }
   }
 }
