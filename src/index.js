@@ -2,6 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.less'
 
-import App from './app/App'
+import HomePage from './pages/home'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<HomePage />, document.getElementById('root'))

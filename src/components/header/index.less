@@ -1,0 +1,43 @@
+.root {
+  min-height: 180px;
+  background-color: rgb(75, 170, 179);
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1100px;
+    display: flex;
+    // justify-content: center;
+    .content {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      .title {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .info {
+        font-size: 14px;
+      }
+    }
+    .action {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          width: 26px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
