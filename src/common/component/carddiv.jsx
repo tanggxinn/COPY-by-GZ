@@ -12,10 +12,10 @@ class Card extends Component{
             <div className={styles.minimg}>
             <img 
             src="https://dummyimage.com/260x500/333333/cccccc.png" alt=""/>
-            </div>
-            <div className={styles.autoimg}>
-            <img 
-            src="https://dummyimage.com/260x500/333333/cccccc.png" alt=""/>
+              <div className={styles.autoimg}>
+              <img 
+              src="https://dummyimage.com/260x500/333333/cccccc.png" alt=""/>
+              </div>
             </div>
             <p className={styles.sum}>{cardname}
               <p>{summary}</p>

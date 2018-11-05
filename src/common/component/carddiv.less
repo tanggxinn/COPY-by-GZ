@@ -34,16 +34,21 @@
         height: @imgsize;
         .radius;
       }
-    }
-    .autoimg {
-      display: none;
-      position:absolute;
-      z-index: 999999;
-      top: 0;
-    }
-    .minimg:hover +.autoimg {
-        display: block;
+      .autoimg {
+        display: none;
+        position:absolute;
+        top: 0;
+        img {
+          width: auto;
+          height: auto;
+        }
       }
+    }
+    .minimg:hover {
+      .autoimg {
+          display: block;
+        }
+    }
 
     .sum {
       padding-top: @padding;
