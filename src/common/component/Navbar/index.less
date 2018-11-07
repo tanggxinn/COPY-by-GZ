@@ -1,0 +1,57 @@
+@lineh:26px;
+@ffonts:16px;
+@sfonts:13.9px;
+
+.li{
+  width: 160px;
+  height: @lineh;
+  text-align: center;
+  line-height: @lineh;
+}
+.size{
+  width: 100%;
+}
+
+.root{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  .size;
+  height: @lineh;
+  .first{
+    .size;
+    display: flex;
+    justify-content: space-around;
+    .title{
+      .li;
+      font-size: @ffonts;
+      position: relative;
+      .second{
+        .size;
+        position: absolute;
+        top: @lineh;
+        padding: 6px 0;
+        border-radius: 0 0 8px 8px;
+        overflow: hidden;
+        display: none;
+        .item{
+          .li;
+          font-size: @sfonts;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .title:hover{
+      background-color: #ebebeb;
+      .second{
+        display: block;
+        background-color: #f7f7f7;
+        .item:hover{
+          background-color: #cccccc;
+        }
+      }
+    }
+  }
+}

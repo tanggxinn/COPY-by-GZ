@@ -1,0 +1,42 @@
+.horizonc{
+  display: flex;
+  justify-content: center;
+}
+.father{
+  width: 100%;
+  .horizonc;
+}
+.childwidth{
+  width: 70%;
+}
+
+.root {
+  .father;
+  flex-direction: column;
+  align-items: center;
+  .over{
+    .father;
+    height: 200px;
+    background-color: #FFEFA7;
+    header{
+      .childwidth;
+      height: 100%;
+      .horizonc;
+    }
+  }
+  .half{
+    .father;
+    background-color: #ffffff;
+    nav{
+      .childwidth;
+    }
+  }
+  .in{
+    .father;
+    min-height: 600px;
+    background-color: #eeeeee;
+    .init{
+      .childwidth;
+    }
+  }
+}

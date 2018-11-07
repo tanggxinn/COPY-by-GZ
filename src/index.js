@@ -1,7 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.less'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import App from './app/App'
+import 'normalize.css';
+import './index.less';
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import App from './app/App';
+
+ReactDOM.render(<App />, document.getElementById('root'));

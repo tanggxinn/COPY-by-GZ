@@ -1,0 +1,44 @@
+.perpendc{
+  display: flex;
+  align-items: center;
+}
+@rwidth:80px;
+@rheight:60px;
+
+.root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .perpendc;
+  .left{
+    position: absolute;
+    left: 0;
+    h1{
+      margin-top: 0;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .right{
+    position: absolute;
+    right: 0;
+    a{
+      width: @rwidth;
+      height: @rheight;
+      color: #333333;
+      text-decoration: none;
+      .github{
+        .perpendc;
+        flex-direction: column;
+        img{
+          width: @rwidth;
+        }
+        p{
+          font-size: 13px;
+          margin: @rheight - 45px - 13px 0 0 0;
+        }
+      }
+    }
+  }
+}

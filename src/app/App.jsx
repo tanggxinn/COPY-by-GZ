@@ -1,24 +1,12 @@
-import React, { Component } from 'react'
-import { get } from '../utils/require'
-import Headdiv from '../common/component/headdiv'
-import Middlediv from '../common/component/middlediv'
-import Maindiv from '../common/component/maindiv';
+import React from "react"
+import Homepage from "./Homepage/index";
 
-class Demo extends Component {
-  componentDidMount() {
-    get('https://jsonplaceholder.typicode.com/posts').then(res => {
-      console.log(res)
-    })
-  }
-  render() {
-    return (
-      <div>
-        <Headdiv />
-        <Middlediv />
-        <Maindiv />
-      </div>
-    )
-  }
+function App (props) {
+  return (
+    <div>
+      <Homepage />
+    </div>
+  );
 }
 
-export default Demo
+export default App
