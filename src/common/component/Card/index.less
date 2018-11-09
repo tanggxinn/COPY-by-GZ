@@ -1,0 +1,78 @@
+@cardwidth:200px;
+@cardheight:320px;
+@padding:12px;
+@minimg:@cardwidth - @padding*2;
+@maximg:600px;
+@titlefs:15px;
+@pheight:@cardheight - @minimg - @padding*2;
+@itemlineh:@titlefs + 4px;
+
+.cardsize{
+  width: @cardwidth;
+  height: @cardheight;
+}
+.radius{
+  border-radius: 8px;
+}
+
+.root{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .onecard{
+    .cardsize;
+    background-color: #ffffff;
+    margin: 20px 20px 0 0;
+    padding: @padding;
+    .radius;
+    a{
+      .cardsize;
+      .back{
+        .imgchange{
+          width: @minimg;
+          height: @minimg;
+          position: relative;
+          .minimg{
+            width: @minimg;
+            height: @minimg;
+            .radius;
+          }
+          .maximg{
+            position: absolute;
+            top: 0;
+            border: 1px solid #333333;
+            max-width: @maximg;
+            max-height: @maximg;
+            z-index: 99999;
+            display: none;
+          }
+        }
+        .imgchange:hover{
+          .maximg{
+            display: block;
+          }
+        }
+        .pchange{
+          height: @pheight;
+          line-height: @itemlineh;
+          overflow: hidden;
+          .title{
+            font-size: @titlefs;
+            color: #333333;
+            text-align: center;
+            line-height: @titlefs + @padding*2;
+            margin-top: 3.5px;
+          }
+          .item{
+            font-size: @titlefs - 3px;
+            color: #545454;
+            text-align: left;
+            line-height: @itemlineh;
+            text-indent: 2*(@titlefs - 3px);
+          }
+        }
+      }
+    }
+  }
+}
